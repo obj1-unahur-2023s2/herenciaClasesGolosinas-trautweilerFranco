@@ -151,8 +151,21 @@ class ObleasCrujientes inherits Oblea {
 	}
 }
 
+class ChocolatinVIP inherits Chocolatin {
+	
+	method humedad() = heladeraDeMariano.humedad()
+	override method peso()= super()*(1 + self.humedad())
+}
+
+class CholatinPremium inherits ChocolatinVIP {
+	
+	override method humedad() = super() / 2
+}
 
 
+object heladeraDeMariano {
+	var property humedad = 0 
+}
 
 
 
